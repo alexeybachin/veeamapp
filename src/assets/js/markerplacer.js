@@ -50,6 +50,7 @@ export default class MarkerPlacer {
         input.type = "text";
         input.placeholder = "Enter some text...";
         input.addEventListener( "keyup", e => this.setMarkerText( marker, input.value, e.keyCode ), false );
+        input.addEventListener( "blur", e => this.setMarkerText( marker, input.value, e.keyCode ), false );
         marker.appendChild( input );
 
         this.overlay.appendChild( marker );

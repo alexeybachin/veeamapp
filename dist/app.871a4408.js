@@ -366,6 +366,9 @@ function () {
       input.addEventListener("keyup", function (e) {
         return _this3.setMarkerText(marker, input.value, e.keyCode);
       }, false);
+      input.addEventListener("blur", function (e) {
+        return _this3.setMarkerText(marker, input.value, e.keyCode);
+      }, false);
       marker.appendChild(input);
       this.overlay.appendChild(marker);
     }
